@@ -6,5 +6,7 @@ import java.util.List;
 
 public interface ApplicationService {
 
+    List<ApplicationDto> findAll();
+
     List<ApplicationDto> findAllByUserId(long id);
 }

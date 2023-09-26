@@ -27,4 +27,6 @@ public class ApplicationDto {
 
     private String tags;
 
+    private String status;
+
 }

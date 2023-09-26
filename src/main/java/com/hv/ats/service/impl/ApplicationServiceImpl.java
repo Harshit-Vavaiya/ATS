@@ -21,6 +21,13 @@ public class ApplicationServiceImpl implements ApplicationService {
     }
 
     @Override
+    public List<ApplicationDto> findAll() {
+        List<Application> applications = applicationRepository.findAll();
+
+        return applications.stream().map((application) -> mapToApplicationDto(application)).collect(Collectors.toList());
+    }
+
+    @Override
     public List<ApplicationDto> findAllByUserId(long id) {
         List<Application> applications = applicationRepository.findAllByUserId(id);
 
@@ -39,6 +46,7 @@ public class ApplicationServiceImpl implements ApplicationService {
                 .coverLetter(application.getCoverLetter())
                 .resume(application.getResume())
                 .tags(application.getTags())
+                .status(application.getStatus())
         .build();
         return applicationDto;
     }

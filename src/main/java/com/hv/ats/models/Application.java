@@ -10,40 +10,23 @@ import org.hibernate.annotations.CreationTimestamp;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "appication")
+@Table(name="applications",schema = "applications")
 public class Application {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-    @NonNull
     private long userId;
-
-    @NonNull
     private String company;
-
-    @NonNull
     private String description;
-
-    @NonNull
     private String role;
-
-    @NonNull
     private String platform;
-
-    @NonNull
     @CreationTimestamp
     private String appliedOn;
-
-    @NonNull
     private String resume;
-
-    @NonNull
     private String coverLetter;
-
-    @NonNull
     private String tags;
+    private String status;
 
 
 

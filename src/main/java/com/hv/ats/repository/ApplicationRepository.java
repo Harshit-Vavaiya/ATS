@@ -8,6 +8,8 @@ import java.util.Optional;
 
 public interface ApplicationRepository extends JpaRepository<Application,Long> {
 
+    @Override
+    List<Application> findAll();
 
-    List<Application> findAllByUserId(Long aLong);
+    List<Application> findAllByUserId(Long id);
 }

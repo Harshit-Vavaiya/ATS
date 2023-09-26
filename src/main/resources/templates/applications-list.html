@@ -1,0 +1,16 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:each="app : ${applications}">
+    <!--/*@thymesVar id="role" type=""*/-->
+    <span th:text="${app.role}"></span>
+    <span th:text="${app.company}"></span>
+    <span th:text="${app.platform}"></span>
+</div>
+
+</body>
+</html>
